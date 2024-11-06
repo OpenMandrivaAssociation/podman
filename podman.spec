@@ -8,6 +8,7 @@ Summary: Tool for managing OCI containers and pods
 URL: https://github.com/containers/podman
 License: Apache-2.0
 Group: Servers
+BuildRequires: golang
 
 %description
 Podman (the POD MANager) is a tool for managing containers and images, volumes
