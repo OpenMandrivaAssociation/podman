@@ -12,6 +12,8 @@ BuildRequires: golang
 BuildRequires: man
 BuildRequires: git-core
 BuildRequires: pkgconfig(libbtrfsutil)
+BuildRequires: pkgconfig(libseccomp)
+BuildRequires: pkgconfig(gpgme)
 
 %description
 Podman (the POD MANager) is a tool for managing containers and images, volumes
