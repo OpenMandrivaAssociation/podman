@@ -14,6 +14,7 @@ BuildRequires: git-core
 BuildRequires: pkgconfig(libbtrfsutil)
 BuildRequires: pkgconfig(libseccomp)
 BuildRequires: pkgconfig(gpgme)
+Requires: conmon
 
 %description
 Podman (the POD MANager) is a tool for managing containers and images, volumes
