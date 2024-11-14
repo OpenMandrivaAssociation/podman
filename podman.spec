@@ -1,7 +1,7 @@
 %undefine _debugsource_packages
 
 Name: podman
-Version: 5.2.5
+Version: 5.3.0
 Release: 1
 Source0: https://github.com/containers/podman/archive/refs/tags/v%{version}.tar.gz
 Summary: Tool for managing OCI containers and pods
@@ -51,6 +51,7 @@ managing containers, pods, container images, and volumes.
 %{_prefix}/lib/systemd/user/podman-clean-transient.service
 %{_prefix}/lib/systemd/user/podman-kube@.service
 %{_prefix}/lib/systemd/user/podman-restart.service
+%{_prefix}/lib/systemd/user/podman-user-wait-network-online.service
 %{_prefix}/lib/systemd/user/podman.service
 %{_prefix}/lib/systemd/user/podman.socket
 %{_prefix}/lib/tmpfiles.d/podman.conf
@@ -59,3 +60,5 @@ managing containers, pods, container images, and volumes.
 %{_libexecdir}/podman/rootlessport
 %{_mandir}/man1/*.1*
 %{_mandir}/man5/*.5*
+%{_mandir}/man7/podman-rootless.7*
+%{_mandir}/man7/podman-troubleshooting.7*
