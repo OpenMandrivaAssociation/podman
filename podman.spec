@@ -1,7 +1,7 @@
 %undefine _debugsource_packages
 
 Name: podman
-Version: 5.3.0
+Version: 5.3.1
 Release: 1
 Source0: https://github.com/containers/podman/archive/refs/tags/v%{version}.tar.gz
 Summary: Tool for managing OCI containers and pods
