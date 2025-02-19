@@ -1,9 +1,12 @@
 %undefine _debugsource_packages
 
 Name: podman
-Version: 5.3.1
+Version: 5.4.0
 Release: 1
 Source0: https://github.com/containers/podman/archive/refs/tags/v%{version}.tar.gz
+Source1: policy.json
+Source2: 00-unqualified-search-registries.conf
+Source3: 01-registries.conf
 Summary: Tool for managing OCI containers and pods
 URL: https://github.com/containers/podman
 License: Apache-2.0
@@ -15,6 +18,8 @@ BuildRequires: pkgconfig(libbtrfsutil)
 BuildRequires: pkgconfig(libseccomp)
 BuildRequires: pkgconfig(gpgme)
 Requires: conmon
+Recommends: netavark
+Recommends: aardvark-dns
 
 %description
 Podman (the POD MANager) is a tool for managing containers and images, volumes
@@ -33,7 +38,15 @@ managing containers, pods, container images, and volumes.
 %install
 %make_install PREFIX=%{_prefix}
 
+mkdir -p %{buildroot}%{_sysconfdir}/containers/registries.conf.d
+install -c -m 644 %{S:1} %{buildroot}%{_sysconfdir}/containers/policy.json
+install -c -m 644 %{S:2} %{buildroot}%{_sysconfdir}/containers/registries.conf.d/
+install -c -m 644 %{S:3} %{buildroot}%{_sysconfdir}/containers/registries.conf.d/
+
 %files
+%config %{_sysconfdir}/containers/policy.json
+%dir %{_sysconfdir}/containers/registries.conf.d
+%config %{_sysconfdir}/containers/registries.conf.d/*
 %{_bindir}/podman
 %{_bindir}/podman-remote
 %{_bindir}/podmansh
