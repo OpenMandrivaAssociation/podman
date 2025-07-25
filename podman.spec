@@ -2,7 +2,7 @@
 
 Name: podman
 Version: 5.5.2
-Release: 1
+Release: 2
 Source0: https://github.com/containers/podman/archive/refs/tags/v%{version}.tar.gz
 Source1: policy.json
 Source2: 00-unqualified-search-registries.conf
@@ -18,6 +18,9 @@ BuildRequires: pkgconfig(libbtrfsutil)
 BuildRequires: pkgconfig(libseccomp)
 BuildRequires: pkgconfig(gpgme)
 Requires: conmon
+Requires: crun
+Requires: passt
+Recommends: distrobox
 Recommends: netavark
 Recommends: aardvark-dns
 
