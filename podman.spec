@@ -1,8 +1,8 @@
 %undefine _debugsource_packages
 
 Name: podman
-Version: 5.5.2
-Release: 2
+Version: 5.6.0
+Release: 1
 Source0: https://github.com/containers/podman/archive/refs/tags/v%{version}.tar.gz
 Source1: policy.json
 Source2: 00-unqualified-search-registries.conf
