@@ -1,7 +1,7 @@
 %undefine _debugsource_packages
 
 Name: podman
-Version: 5.6.2
+Version: 5.7.0
 Release: 1
 Source0: https://github.com/containers/podman/archive/refs/tags/v%{version}.tar.gz
 Source1: policy.json
