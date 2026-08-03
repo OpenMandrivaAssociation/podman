@@ -77,5 +77,6 @@ install -c -m 644 %{S:3} %{buildroot}%{_sysconfdir}/containers/registries.conf.d
 %{_libexecdir}/podman/rootlessport
 %{_mandir}/man1/*.1*
 %{_mandir}/man5/*.5*
+%{_mandir}/man7/podman-quadlet-basic-usage.7.*
 %{_mandir}/man7/podman-rootless.7*
 %{_mandir}/man7/podman-troubleshooting.7*
