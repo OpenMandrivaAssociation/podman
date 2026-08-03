@@ -11,6 +11,7 @@ Summary: Tool for managing OCI containers and pods
 URL: https://github.com/containers/podman
 License: Apache-2.0
 Group: Servers
+BuildRequires: make
 BuildRequires: golang
 BuildRequires: man
 BuildRequires: git-core
