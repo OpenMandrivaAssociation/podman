@@ -1,7 +1,7 @@
 %undefine _debugsource_packages
 
 Name: podman
-Version: 6.0.2
+Version: 6.1.0
 Release: 1
 Source0: https://github.com/containers/podman/archive/refs/tags/v%{version}.tar.gz
 Source1: policy.json
@@ -78,5 +78,3 @@ install -c -m 644 %{S:3} %{buildroot}%{_sysconfdir}/containers/registries.conf.d
 %{_mandir}/man1/*.1*
 %{_mandir}/man5/*.5*
 %{_mandir}/man7/podman-quadlet-basic-usage.7.*
-%{_mandir}/man7/podman-rootless.7*
-%{_mandir}/man7/podman-troubleshooting.7*
